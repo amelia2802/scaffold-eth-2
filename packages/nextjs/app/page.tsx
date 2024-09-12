@@ -61,6 +61,9 @@ const Home: NextPage = () => {
                 tab.
               </p>
             </div>
+            <p className="text-center text-lg mt-4">
+              <strong style={{ fontSize: "36px", color: "#04D1FF" }}>DEPLOY ON METIS</strong>
+            </p>
           </div>
         </div>
       </div>

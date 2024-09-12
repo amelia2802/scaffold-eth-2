@@ -70,6 +70,26 @@ const config: HardhatUserConfig = {
       url: `https://opt-sepolia.g.alchemy.com/v2/${providerApiKey}`,
       accounts: [deployerPrivateKey],
     },
+    andromeda: {
+      url: "https://andromeda.metis.io/?owner=1088",
+      accounts: [deployerPrivateKey],
+      verify: {
+        etherscan: {
+          apiKey: "apiKey is not required, just set a placeholder",
+          apiUrl: "https://api.routescan.io/v2/network/mainnet/evm/1088/etherscan",
+        },
+      },
+    },
+    metisSepolia: {
+      url: "https://sepolia.metisdevops.link/",
+      accounts: [deployerPrivateKey],
+      verify: {
+        etherscan: {
+          apiKey: "apiKey is not required, just set a placeholder",
+          apiUrl: "https://sepolia.explorer.metisdevops.link",
+        },
+      },
+    },
     polygon: {
       url: `https://polygon-mainnet.g.alchemy.com/v2/${providerApiKey}`,
       accounts: [deployerPrivateKey],

@@ -80,6 +80,16 @@ contract YourContract {
 		require(success, "Failed to send Ether");
 	}
 
+		// Mapping from address to number
+	mapping(address => uint) public userNumbers;
+	event NumberUpdated(address indexed user, uint number);
+
+	// Function to store a number
+	function storeNumber(uint _number) public {
+		userNumbers[msg.sender] = _number;
+		emit NumberUpdated(msg.sender, _number);
+		}
+
 	/**
 	 * Function that allows the contract to receive ETH
 	 */
